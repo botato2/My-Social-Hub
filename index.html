@@ -1474,8 +1474,8 @@
                 // Create mailto URL
                 const mailtoUrl = `mailto:spynot1113@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
-                // Open email client
-                window.location.href = mailtoUrl;
+                // Open email client in new tab
+                window.open(mailtoUrl, '_blank');
                 
                 // Optional: Show confirmation
                 const originalText = sendMessageBtn.innerHTML;
@@ -1535,3 +1535,4 @@
     </script>
 </body>
 </html>
+
