@@ -283,6 +283,145 @@
             display: block;
         }
         
+        /* Contact Form Section */
+        .contact-section {
+            margin-bottom: 60px;
+            padding: 40px 20px;
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, rgba(26, 75, 140, 0.2), rgba(10, 26, 58, 0.3));
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(42, 127, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-blue), #833AB4);
+        }
+        
+        .contact-title {
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: white;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-blue);
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            position: relative;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(42, 127, 255, 0.2);
+            border-radius: 12px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(42, 127, 255, 0.1);
+        }
+        
+        .form-input::placeholder, .form-textarea::placeholder {
+            color: var(--text-gray);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+        
+        .form-submit {
+            background: linear-gradient(45deg, var(--accent-blue), #1a6eff);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            box-shadow: 0 5px 20px rgba(42, 127, 255, 0.3);
+        }
+        
+        .form-submit:hover {
+            background: linear-gradient(45deg, #1a6eff, var(--accent-blue));
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(42, 127, 255, 0.4);
+        }
+        
+        .form-submit i {
+            transition: transform 0.3s;
+        }
+        
+        .form-submit:hover i {
+            transform: translateX(5px);
+        }
+        
+        .honeypot {
+            display: none;
+        }
+        
+        .form-note {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
         /* Music Player */
         .music-player-container {
             position: fixed;
@@ -755,6 +894,15 @@
                 height: 70px;
                 font-size: 30px;
             }
+            
+            .contact-container {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+            
+            .contact-title {
+                font-size: 1.8rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -787,6 +935,14 @@
                 width: 65px;
                 height: 65px;
                 font-size: 28px;
+            }
+            
+            .contact-container {
+                padding: 25px 15px;
+            }
+            
+            .contact-title {
+                font-size: 1.6rem;
             }
         }
         
@@ -895,7 +1051,7 @@
                     </div>
                     <div class="social-content">
                         <h3>Instagram</h3>
-                        <p>Always active here !</p>
+                        <p>Always active here .</p>
                         <a href="https://www.instagram.com/_botato_/" target="_blank" class="social-link">
                             Visit Profile <i class="fas fa-arrow-right"></i>
                         </a>
@@ -908,7 +1064,7 @@
                     </div>
                     <div class="social-content">
                         <h3>Threads</h3>
-                        <p>I just have it lol</p>
+                        <p>I just check sometimes for new messages LOL .</p>
                         <a href="https://www.threads.com/@_botato_" target="_blank" class="social-link">
                             Visit Profile <i class="fas fa-arrow-right"></i>
                         </a>
@@ -934,7 +1090,7 @@
                     </div>
                     <div class="social-content">
                         <h3>Facebook</h3>
-                        <p>Uhh i don't like facebook that much.</p>
+                        <p>Uhh i don't like facebook .</p>
                         <a href="https://web.facebook.com/botatosoooo/" target="_blank" class="social-link">
                             Visit Profile <i class="fas fa-arrow-right"></i>
                         </a>
@@ -954,6 +1110,39 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="contact-section fade-in">
+            <div class="contact-container">
+                <h2 class="contact-title">Send Me a Message</h2>
+                <p class="contact-subtitle">Got something to say? I'd love to hear from you!</p>
+                
+                <form class="contact-form" action="https://submit.silentforms.com" method="POST">
+                    <!-- SilentForms access key -->
+                    <input type="hidden" name="accessKey" value="52c7b042c0d44dbb1dfcd7ea308693e2dcf94d37441a5ced0b1055d711797b1d">
+                    
+                    <!-- Hidden field to send either the name or "User" -->
+                    <input type="hidden" name="name" id="finalName">
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="username" placeholder="Your name (optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-textarea" name="message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <!-- Hidden honeypot (spam) -->
+                    <input type="text" name="honeypot" class="honeypot">
+                    
+                    <p class="form-note">Your private message will be sent directly to me .</p>
+                </form>
             </div>
         </section>
         
@@ -1243,6 +1432,27 @@
             }
         }, { once: true });
         
+        // Contact form submission handler
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener("submit", function () {
+                const inputName = document.getElementById("username").value.trim();
+                document.getElementById("finalName").value = inputName || "User";
+                
+                // Optional: Add form submission feedback
+                const submitBtn = contactForm.querySelector('.form-submit');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Re-enable button after 3 seconds (in case of error)
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
+        }
+        
         // Update progress while music plays
         music.addEventListener("timeupdate", updateProgress);
         
@@ -1288,4 +1498,3 @@
     </script>
 </body>
 </html>
-
