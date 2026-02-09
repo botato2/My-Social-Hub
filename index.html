@@ -48,6 +48,31 @@
             padding: 40px 20px 30px;
             position: relative;
             overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 25px;
+            background: linear-gradient(rgba(10, 26, 58, 0.9), rgba(10, 26, 58, 0.95)),
+                        url('https://i.pinimg.com/736x/cc/6d/28/cc6d2831b2edcb8e59809936a50107fc.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(42, 127, 255, 1);
+            backdrop-filter: blur(12px);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            z-index: 1;
         }
         
         .profile-container {
@@ -55,6 +80,8 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
         
         .profile-pic {
@@ -66,6 +93,7 @@
             object-fit: cover;
             margin-bottom: 20px;
             transition: transform 0.5s;
+            background: rgba(10, 26, 58, 0.8);
         }
         
         .profile-pic:hover {
@@ -89,8 +117,16 @@
             font-size: 1.2rem;
             color: var(--text-gray);
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 30px;    
             line-height: 1.6;
+            background: rgba(10, 26, 58, 0.75);
+            padding: 12px 24px;
+            border-radius: 15px;
+            border: 2px solid rgba(42, 127, 255, 0.4);
+            backdrop-filter: blur(8px);
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
         }
         
         /* Social Links - NEW LAYOUT */
@@ -222,6 +258,26 @@
             background: linear-gradient(45deg, #779954, #4a6b2a);
         }
         
+        .pinterest-bg {
+            background: linear-gradient(45deg, #E60023, #BD081C);
+        }
+        
+        .discord-bg {
+            background: linear-gradient(45deg, #5865F2, #7289DA);
+        }
+        
+        .twitter-bg {
+            background: linear-gradient(45deg, #000000, #1DA1F2);
+        }
+        
+        .github-bg {
+            background: linear-gradient(45deg, #333333, #24292E);
+        }
+        
+        .reddit-bg {
+            background: linear-gradient(45deg, #FF4500, #FF5700);
+        }
+        
         .social-content {
             width: 100%;
         }
@@ -276,7 +332,7 @@
             transform: translateX(5px);
         }
         
-        .chess-note {
+        .social-note {
             color: #FFD700;
             font-weight: 600;
             font-size: 0.9rem;
@@ -965,10 +1021,15 @@
             animation: fadeIn 0.8s ease forwards;
         }
         
-        .delay-1 { animation-delay: 0.2s; opacity: 0; }
-        .delay-2 { animation-delay: 0.4s; opacity: 0; }
-        .delay-3 { animation-delay: 0.6s; opacity: 0; }
-        .delay-4 { animation-delay: 0.8s; opacity: 0; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .delay-4 { animation-delay: 0.4s; opacity: 0; }
+        .delay-5 { animation-delay: 0.5s; opacity: 0; }
+        .delay-6 { animation-delay: 0.6s; opacity: 0; }
+        .delay-7 { animation-delay: 0.7s; opacity: 0; }
+        .delay-8 { animation-delay: 0.8s; opacity: 0; }
+        .delay-9 { animation-delay: 0.9s; opacity: 0; }
     </style>
 </head>
 <body>
@@ -1003,7 +1064,7 @@
                     <i class="fas fa-play-circle"></i>
                 </div>
                 <div class="track-details">
-                    <h4>The Cut That Always Bleeds</h4>
+                    <h4>Baby doll</h4>
                     <p>Conan Gray</p>
                 </div>
             </div>
@@ -1046,7 +1107,7 @@
             <div class="profile-container fade-in">
                 <img src="https://cdn-b.heylink.me/media/users/avatars/a3edaf247c2a44daa6f00d62b703749b.webp" alt="Botato Profile Picture" class="profile-pic">
                 <h1 class="name">𝓑𝓞𝓣𝓐𝓣𝓞</h1>
-                <p class="tagline">Anime enthusiast • Chess player • Editor • Developer</p>
+                <p class="tagline">Chess player • Editor • Developer</p>
             </div>
         </header>
         
@@ -1054,6 +1115,7 @@
         <section class="social-section">
             <h2 class="social-section-title fade-in">Connect With Me</h2>
             <div class="social-grid">
+                <!-- First Row -->
                 <div class="social-card fade-in delay-1">
                     <div class="social-icon-container instagram-bg">
                         <i class="fab fa-instagram"></i>
@@ -1066,8 +1128,22 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="social-card fade-in delay-2">
+                    <div class="social-icon-container discord-bg">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>Discord</h3>
+                        <p>Chilling xd</p>
+                        <a href="https://www.discord.com/users/761599757310623765" target="_blank" class="social-link">
+                            Visit Profile <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Second Row -->
+                <div class="social-card fade-in delay-3">
                     <div class="social-icon-container threads-bg">
                         <i class="fas fa-comment"></i>
                     </div>
@@ -1080,7 +1156,7 @@
                     </div>
                 </div>
                 
-                <div class="social-card fade-in delay-3">
+                <div class="social-card fade-in delay-4">
                     <div class="social-icon-container tiktok-bg">
                         <i class="fab fa-tiktok"></i>
                     </div>
@@ -1093,7 +1169,8 @@
                     </div>
                 </div>
                 
-                <div class="social-card fade-in delay-1">
+                <!-- Third Row -->
+                <div class="social-card fade-in delay-5">
                     <div class="social-icon-container facebook-bg">
                         <i class="fab fa-facebook"></i>
                     </div>
@@ -1106,14 +1183,70 @@
                     </div>
                 </div>
                 
-                <div class="social-card fade-in delay-2">
+                <div class="social-card fade-in delay-6">
+                    <div class="social-icon-container pinterest-bg">
+                        <i class="fab fa-pinterest"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>Pinterest</h3>
+                        <p>Find my collections and inspirations.</p>
+                        <a href="https://www.pinterest.com/botato3" target="_blank" class="social-link">
+                            Visit Profile <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Fourth Row -->
+                <div class="social-card fade-in delay-7">
+                    <div class="social-icon-container twitter-bg">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>Twitter (X)</h3>
+                        <p>Thoughts and random stuff.</p>
+                        <a href="https://x.com/_botatos_" target="_blank" class="social-link">
+                            Visit Profile <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="social-card fade-in delay-8">
+                    <div class="social-icon-container github-bg">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>GitHub</h3>
+                        <p>Check out my coding projects and experiments.</p>
+                        <span class="social-note">Just a Hobbie</span>
+                        <a href="https://github.com/botato3" target="_blank" class="social-link">
+                            Visit Profile <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Fifth Row -->
+                <div class="social-card fade-in delay-9">
+                    <div class="social-icon-container reddit-bg">
+                        <i class="fab fa-reddit"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>Reddit</h3>
+                        <p>Memes and random finds.</p>
+                        <span class="social-note">Life saver lol</span>
+                        <a href="https://www.reddit.com/user/Connect-Swing-5067/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" class="social-link">
+                            Visit Profile <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="social-card fade-in delay-10">
                     <div class="social-icon-container chess-bg">
                         <i class="fas fa-chess-knight"></i>
                     </div>
                     <div class="social-content">
                         <h3>Chess.com</h3>
                         <p>Challenge me to a chess match. Test your skills!</p>
-                        <span class="chess-note">We can play!</span>
+                        <span class="social-note">We can play!</span>
                         <a href="https://www.chess.com/member/yassine1983" target="_blank" class="social-link">
                             Visit Profile <i class="fas fa-arrow-right"></i>
                         </a>
@@ -1121,8 +1254,6 @@
                 </div>
             </div>
         </section>
-        
-        
         
         <h2 class="section-title fade-in">My Anime Journey</h2>
         
@@ -1289,7 +1420,7 @@
 
     <!-- Background Music -->
     <audio id="bgMusic" preload="auto" loop>
-        <source src="Conan Gray - The Cut That Always Bleeds (Lyrics).mp3" type="audio/mpeg">
+        <source src="Baby Doll.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -1372,7 +1503,7 @@
             if (hasMusicStarted) return;
             
             hasMusicStarted = true;
-            music.currentTime = 115;
+            //music.currentTime = 115;
             music.volume = 0.5;
             setVolume(50);
             
@@ -1535,4 +1666,3 @@
     </script>
 </body>
 </html>
-
